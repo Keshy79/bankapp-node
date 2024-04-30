@@ -4,7 +4,7 @@ let port = process.env.PORT;
 const mongoose = require('mongoose');
 const cors = require('cors');
 const userRouter = require('./Routes/User.Route');
-const URI = "mongodb+srv://Okunadekeshifat:Okunadekeshifat@cluster0.cmwtd6u.mongodb.net/User_database?retryWrites=true&w=majority&appName=Cluster0"
+let URI = process.env. URI
 const app = express();
 
 app.use(cors());
