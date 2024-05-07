@@ -2,7 +2,6 @@ const userModel = require("../Models/User.Model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-// const secretKey = process.env.SECRET;
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
 const secretKeyLength = 32;
@@ -15,7 +14,7 @@ const emailGen = () => {
     for (let i = 0; i < 11; i++) {
         text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
-    return text + "@gmail.com"; // Append a domain to make it a valid email address
+    return text + "@gmail.com";
 };
 
 const createUser = (req, res) => {
